@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CountryTableViewCell.h
 //  FlatstackTask
 //
 //  Created by Тимур Шафигуллин on 28.11.2017.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Country.h"
 
-@interface ViewController : UIViewController
-
-
+@interface CountryTableViewCell : UITableViewCell
+- (void) prepareCellWithCountry:(Country *)country;
 @end
-
