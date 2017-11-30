@@ -6,7 +6,7 @@
 //  Copyright © 2017 Flatstack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @interface Country : NSObject
 
@@ -16,9 +16,9 @@
 @property (nonatomic) NSUInteger population;
 @property (nonatomic, strong) NSString *shortDescription;
 @property (nonatomic, strong) NSString *fullDescription;
-@property (nonatomic, strong) NSMutableArray<UIImage *> *images;
-@property (nonatomic, strong) UIImage *flagImage;
+@property (nonatomic, strong) NSMutableArray<NSURL *> *imagesURL;
+@property (nonatomic, strong) NSURL *flagImageURL;
 
-- (id)initWithName:(NSString *)name continent:(NSString *)contentent capital:(NSString *)capital population:(NSUInteger)population shortDescription:(NSString *)shortDescription fullDescription:(NSString *)fullDescription images:(NSMutableArray<UIImage *> *)images flagImage:(UIImage *)flagImage;
+- (id)initWithName:(NSString *)name continent:(NSString *)contentent capital:(NSString *)capital population:(NSUInteger)population shortDescription:(NSString *)shortDescription fullDescription:(NSString *)fullDescription images:(NSMutableArray<NSURL *> *)imagesURL flagImage:(NSURL *)flagImageURL;
 
 @end

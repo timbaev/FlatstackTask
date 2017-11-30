@@ -10,8 +10,7 @@
 
 @implementation Country
 
-- (id)initWithName:(NSString *)name continent:(NSString *)contentent capital:(NSString *)capital population:(NSUInteger)population shortDescription:(NSString *)shortDescription fullDescription:(NSString *)fullDescription images:(NSMutableArray<UIImage *> *)images flagImage:(UIImage *)flagImage {
-    
+- (id)initWithName:(NSString *)name continent:(NSString *)contentent capital:(NSString *)capital population:(NSUInteger)population shortDescription:(NSString *)shortDescription fullDescription:(NSString *)fullDescription images:(NSMutableArray<NSURL *> *)imagesURL flagImage:(NSURL *)flagImageURL {
     self = [super init];
     if (self) {
         self.name = name;
@@ -20,8 +19,8 @@
         self.population = population;
         self.shortDescription = shortDescription;
         self.fullDescription = fullDescription;
-        self.images = images;
-        self.flagImage = flagImage;
+        self.imagesURL = imagesURL;
+        self.flagImageURL = flagImageURL;
     }
     
     return self;

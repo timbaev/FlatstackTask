@@ -19,6 +19,9 @@
 		5998F3771FCDA7FB00E88012 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3761FCDA7FB00E88012 /* Country.m */; };
 		5998F37B1FCDAC6000E88012 /* CountryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3791FCDAC6000E88012 /* CountryTableViewCell.m */; };
 		5998F37C1FCDAC6000E88012 /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5998F37A1FCDAC6000E88012 /* CountryTableViewCell.xib */; };
+		5998F38F1FD031C700E88012 /* LoadCountryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F38E1FD031C700E88012 /* LoadCountryRequest.m */; };
+		5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3951FD0379B00E88012 /* ApiProvider.m */; };
+		5998F39D1FD0449E00E88012 /* CountryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F39C1FD0449E00E88012 /* CountryParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,16 @@
 		5998F3781FCDAC6000E88012 /* CountryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryTableViewCell.h; sourceTree = "<group>"; };
 		5998F3791FCDAC6000E88012 /* CountryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryTableViewCell.m; sourceTree = "<group>"; };
 		5998F37A1FCDAC6000E88012 /* CountryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryTableViewCell.xib; sourceTree = "<group>"; };
+		5998F37E1FCDC1F500E88012 /* CountryCommunicatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryCommunicatorDelegate.h; sourceTree = "<group>"; };
+		5998F3851FCDC97D00E88012 /* CountryManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryManagerDelegate.h; sourceTree = "<group>"; };
+		5998F38C1FD02A4E00E88012 /* Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		5998F38D1FD031C700E88012 /* LoadCountryRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadCountryRequest.h; sourceTree = "<group>"; };
+		5998F38E1FD031C700E88012 /* LoadCountryRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadCountryRequest.m; sourceTree = "<group>"; };
+		5998F3911FD0369A00E88012 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5998F3941FD0379B00E88012 /* ApiProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiProvider.h; sourceTree = "<group>"; };
+		5998F3951FD0379B00E88012 /* ApiProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiProvider.m; sourceTree = "<group>"; };
+		5998F39B1FD0449E00E88012 /* CountryParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryParser.h; sourceTree = "<group>"; };
+		5998F39C1FD0449E00E88012 /* CountryParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +124,9 @@
 		5998F3381FCDA71700E88012 /* FlatstackTask */ = {
 			isa = PBXGroup;
 			children = (
+				5998F38A1FD02A3000E88012 /* Managers */,
+				5998F3891FD023ED00E88012 /* Utils */,
+				5998F37D1FCDC1BC00E88012 /* Protocols */,
 				5998F3711FCDA76E00E88012 /* Supporting Files */,
 				5998F3701FCDA76700E88012 /* Controllers */,
 				5998F36F1FCDA76000E88012 /* Views */,
@@ -178,6 +194,69 @@
 				5998F3421FCDA71700E88012 /* FlatstackTask.xcdatamodeld */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5998F37D1FCDC1BC00E88012 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5998F37E1FCDC1F500E88012 /* CountryCommunicatorDelegate.h */,
+				5998F3851FCDC97D00E88012 /* CountryManagerDelegate.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5998F3891FD023ED00E88012 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5998F3911FD0369A00E88012 /* Constants.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5998F38A1FD02A3000E88012 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5998F39A1FD0448700E88012 /* Parsers */,
+				5998F3921FD0375A00E88012 /* Providers */,
+				5998F38B1FD02A3800E88012 /* Requests */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5998F38B1FD02A3800E88012 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				5998F38C1FD02A4E00E88012 /* Request.h */,
+				5998F3901FD0358900E88012 /* LoadCountry */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		5998F3901FD0358900E88012 /* LoadCountry */ = {
+			isa = PBXGroup;
+			children = (
+				5998F38D1FD031C700E88012 /* LoadCountryRequest.h */,
+				5998F38E1FD031C700E88012 /* LoadCountryRequest.m */,
+			);
+			path = LoadCountry;
+			sourceTree = "<group>";
+		};
+		5998F3921FD0375A00E88012 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				5998F3941FD0379B00E88012 /* ApiProvider.h */,
+				5998F3951FD0379B00E88012 /* ApiProvider.m */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		5998F39A1FD0448700E88012 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				5998F39B1FD0449E00E88012 /* CountryParser.h */,
+				5998F39C1FD0449E00E88012 /* CountryParser.m */,
+			);
+			path = Parsers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,10 +393,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */,
 				5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */,
 				5998F34C1FCDA71700E88012 /* main.m in Sources */,
+				5998F39D1FD0449E00E88012 /* CountryParser.m in Sources */,
 				5998F3741FCDA79200E88012 /* CountryTableViewController.m in Sources */,
 				5998F3441FCDA71700E88012 /* FlatstackTask.xcdatamodeld in Sources */,
+				5998F38F1FD031C700E88012 /* LoadCountryRequest.m in Sources */,
 				5998F37B1FCDAC6000E88012 /* CountryTableViewCell.m in Sources */,
 				5998F3771FCDA7FB00E88012 /* Country.m in Sources */,
 			);

@@ -9,6 +9,11 @@
 #import "CountryTableViewController.h"
 #import "Country.h"
 #import "CountryTableViewCell.h"
+#import "Request.h"
+#import "LoadCountryRequest.h"
+#import "ApiProvider.h"
+#import "Constants.h"
+#import "CountryParser.h"
 
 @interface CountryTableViewController ()
 @property (nonatomic, strong) NSMutableArray<Country *> *countries;
@@ -17,17 +22,14 @@
 @implementation CountryTableViewController
 
 NSString *const CounrtyCellIdentifier = @"countryCell";
+NSString *const FIRST_END_POINT = @"NikitaAsabin/799e4502c9fc3e0ea7af439b2dfd88fa/raw/145611f98d4ef72b758966f00b25552a78437212/page1.json";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.countries = [[NSMutableArray alloc] init];
-    Country* country1 = [[Country alloc] initWithName:@"Argentina" continent:@"America" capital:@"Buenos Aires" population:123 shortDescription:@"Short description about Argentina" fullDescription:@"Full description" images:nil flagImage:[[UIImage alloc] initWithContentsOfFile:@"argentinaFlag"]];
-    Country* country2 = [[Country alloc] initWithName:@"Brazil" continent:@"America" capital:@"Brasilia" population:123 shortDescription:@"Short description about Brazil" fullDescription:@"Full description" images:nil flagImage:[[UIImage alloc] initWithContentsOfFile:@"argentinaFlag"]];
-    [self.countries addObject:country1];
-    [self.countries addObject:country2];
     
     [self prepareTableView];
+    [self loadCountries];
 }
 
 #pragma mark - Prepare methods
@@ -38,6 +40,24 @@ NSString *const CounrtyCellIdentifier = @"countryCell";
     
     UINib *countryCellNib = [UINib nibWithNibName:@"CountryTableViewCell" bundle:nil];
     [self.tableView registerNib:countryCellNib forCellReuseIdentifier:CounrtyCellIdentifier];
+}
+
+- (void)loadCountries {
+    id<Request> request = [[LoadCountryRequest alloc] initWithEndPoint:FIRST_END_POINT];
+    ApiProvider *provider = [[ApiProvider alloc] initWithBaseUrl:BASE_URL];
+    __weak CountryTableViewController *weakSelf = self;
+    [provider makeRequest:request completionBlock:^(NSData *data) {
+        if (data != nil) {
+            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            if ([NSJSONSerialization isValidJSONObject:responseDictionary]) {
+                weakSelf.countries = [[CountryParser parseWith:responseDictionary] mutableCopy];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.tableView reloadData];
+                });
+            }
+        }
+    }];
 }
 
 #pragma mark - Table view data source

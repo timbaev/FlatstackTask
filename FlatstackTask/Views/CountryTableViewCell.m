@@ -21,7 +21,7 @@
 }
 
 - (void) prepareCellWithCountry:(Country *)country {
-    self.flagImageView.image = country.flagImage;
+    //self.flagImageView.image = country.flagImage;
     self.countryLabel.text = country.name;
     self.capitalLabel.text = country.capital;
     self.shortDescriptionLabel.text = country.shortDescription;
