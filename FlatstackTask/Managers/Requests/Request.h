@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol Request <NSObject>
-@property (nonatomic, strong, readonly) NSString *httpMethod;
-@property (nonatomic, strong) NSString *headers;
-@property (nonatomic, strong) NSString *endPoint;
+@property (nonatomic, readonly) NSString *httpMethod;
+@property (nonatomic, readonly) NSString *headers;
+@property (nonatomic) NSString *endPoint;
 @end

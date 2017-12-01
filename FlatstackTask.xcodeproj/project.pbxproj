@@ -22,6 +22,7 @@
 		5998F38F1FD031C700E88012 /* LoadCountryRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F38E1FD031C700E88012 /* LoadCountryRequest.m */; };
 		5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3951FD0379B00E88012 /* ApiProvider.m */; };
 		5998F39D1FD0449E00E88012 /* CountryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F39C1FD0449E00E88012 /* CountryParser.m */; };
+		5998F3A01FD061E600E88012 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F39F1FD061E600E88012 /* ImageDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		5998F3951FD0379B00E88012 /* ApiProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiProvider.m; sourceTree = "<group>"; };
 		5998F39B1FD0449E00E88012 /* CountryParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryParser.h; sourceTree = "<group>"; };
 		5998F39C1FD0449E00E88012 /* CountryParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryParser.m; sourceTree = "<group>"; };
+		5998F39E1FD061E600E88012 /* ImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		5998F39F1FD061E600E88012 /* ImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 				5998F3541FCDA71700E88012 /* FlatstackTaskTests */,
 				5998F35F1FCDA71700E88012 /* FlatstackTaskUITests */,
 				5998F3371FCDA71700E88012 /* Products */,
+				59C8B5D11FD17BEE0015CB34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				5998F3911FD0369A00E88012 /* Constants.h */,
+				5998F39E1FD061E600E88012 /* ImageDownloader.h */,
+				5998F39F1FD061E600E88012 /* ImageDownloader.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -257,6 +263,13 @@
 				5998F39C1FD0449E00E88012 /* CountryParser.m */,
 			);
 			path = Parsers;
+			sourceTree = "<group>";
+		};
+		59C8B5D11FD17BEE0015CB34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +408,7 @@
 			files = (
 				5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */,
 				5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */,
+				5998F3A01FD061E600E88012 /* ImageDownloader.m in Sources */,
 				5998F34C1FCDA71700E88012 /* main.m in Sources */,
 				5998F39D1FD0449E00E88012 /* CountryParser.m in Sources */,
 				5998F3741FCDA79200E88012 /* CountryTableViewController.m in Sources */,
@@ -566,6 +580,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W56K4E4L5F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FlatstackTask",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/FlatstackTask/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatstack.FlatstackTask;
@@ -580,6 +599,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W56K4E4L5F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FlatstackTask",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/FlatstackTask/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatstack.FlatstackTask;
