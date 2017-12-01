@@ -76,4 +76,8 @@ NSString *const FIRST_END_POINT = @"NikitaAsabin/799e4502c9fc3e0ea7af439b2dfd88f
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 @end

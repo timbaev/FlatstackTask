@@ -23,6 +23,13 @@
 		5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3951FD0379B00E88012 /* ApiProvider.m */; };
 		5998F39D1FD0449E00E88012 /* CountryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F39C1FD0449E00E88012 /* CountryParser.m */; };
 		5998F3A01FD061E600E88012 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F39F1FD061E600E88012 /* ImageDownloader.m */; };
+		59C8B5DD1FD193AB0015CB34 /* CountryDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B5DC1FD193AB0015CB34 /* CountryDetailsTableViewController.m */; };
+		59C8B5E31FD1947D0015CB34 /* CountryInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B5E11FD1947D0015CB34 /* CountryInfoTableViewCell.m */; };
+		59C8B5E41FD1947D0015CB34 /* CountryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C8B5E21FD1947D0015CB34 /* CountryInfoTableViewCell.xib */; };
+		59C8B5E91FD195D60015CB34 /* CountryAboutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B5E71FD195D60015CB34 /* CountryAboutTableViewCell.m */; };
+		59C8B5EA1FD195D60015CB34 /* CountryAboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C8B5E81FD195D60015CB34 /* CountryAboutTableViewCell.xib */; };
+		59C8B5EF1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B5ED1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m */; };
+		59C8B5F01FD1975B0015CB34 /* CountryImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C8B5EE1FD1975B0015CB34 /* CountryImagesCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +84,17 @@
 		5998F39C1FD0449E00E88012 /* CountryParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryParser.m; sourceTree = "<group>"; };
 		5998F39E1FD061E600E88012 /* ImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		5998F39F1FD061E600E88012 /* ImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		59C8B5DB1FD193AB0015CB34 /* CountryDetailsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsTableViewController.h; sourceTree = "<group>"; };
+		59C8B5DC1FD193AB0015CB34 /* CountryDetailsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsTableViewController.m; sourceTree = "<group>"; };
+		59C8B5E01FD1947D0015CB34 /* CountryInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryInfoTableViewCell.h; sourceTree = "<group>"; };
+		59C8B5E11FD1947D0015CB34 /* CountryInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryInfoTableViewCell.m; sourceTree = "<group>"; };
+		59C8B5E21FD1947D0015CB34 /* CountryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryInfoTableViewCell.xib; sourceTree = "<group>"; };
+		59C8B5E61FD195D60015CB34 /* CountryAboutTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryAboutTableViewCell.h; sourceTree = "<group>"; };
+		59C8B5E71FD195D60015CB34 /* CountryAboutTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryAboutTableViewCell.m; sourceTree = "<group>"; };
+		59C8B5E81FD195D60015CB34 /* CountryAboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryAboutTableViewCell.xib; sourceTree = "<group>"; };
+		59C8B5EC1FD1975B0015CB34 /* CountryImagesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryImagesCollectionViewCell.h; sourceTree = "<group>"; };
+		59C8B5ED1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryImagesCollectionViewCell.m; sourceTree = "<group>"; };
+		59C8B5EE1FD1975B0015CB34 /* CountryImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryImagesCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +187,10 @@
 		5998F36F1FCDA76000E88012 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5998F3781FCDAC6000E88012 /* CountryTableViewCell.h */,
-				5998F3791FCDAC6000E88012 /* CountryTableViewCell.m */,
-				5998F37A1FCDAC6000E88012 /* CountryTableViewCell.xib */,
+				59C8B5EB1FD197360015CB34 /* Country Images */,
+				59C8B5E51FD195BE0015CB34 /* Country Ablout */,
+				59C8B5DE1FD194430015CB34 /* Country Info */,
+				59C8B5DF1FD194510015CB34 /* Country Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +200,8 @@
 			children = (
 				5998F3721FCDA79200E88012 /* CountryTableViewController.h */,
 				5998F3731FCDA79200E88012 /* CountryTableViewController.m */,
+				59C8B5DB1FD193AB0015CB34 /* CountryDetailsTableViewController.h */,
+				59C8B5DC1FD193AB0015CB34 /* CountryDetailsTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -270,6 +291,46 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59C8B5DE1FD194430015CB34 /* Country Info */ = {
+			isa = PBXGroup;
+			children = (
+				59C8B5E01FD1947D0015CB34 /* CountryInfoTableViewCell.h */,
+				59C8B5E11FD1947D0015CB34 /* CountryInfoTableViewCell.m */,
+				59C8B5E21FD1947D0015CB34 /* CountryInfoTableViewCell.xib */,
+			);
+			path = "Country Info";
+			sourceTree = "<group>";
+		};
+		59C8B5DF1FD194510015CB34 /* Country Main */ = {
+			isa = PBXGroup;
+			children = (
+				5998F3781FCDAC6000E88012 /* CountryTableViewCell.h */,
+				5998F3791FCDAC6000E88012 /* CountryTableViewCell.m */,
+				5998F37A1FCDAC6000E88012 /* CountryTableViewCell.xib */,
+			);
+			path = "Country Main";
+			sourceTree = "<group>";
+		};
+		59C8B5E51FD195BE0015CB34 /* Country Ablout */ = {
+			isa = PBXGroup;
+			children = (
+				59C8B5E61FD195D60015CB34 /* CountryAboutTableViewCell.h */,
+				59C8B5E71FD195D60015CB34 /* CountryAboutTableViewCell.m */,
+				59C8B5E81FD195D60015CB34 /* CountryAboutTableViewCell.xib */,
+			);
+			path = "Country Ablout";
+			sourceTree = "<group>";
+		};
+		59C8B5EB1FD197360015CB34 /* Country Images */ = {
+			isa = PBXGroup;
+			children = (
+				59C8B5EC1FD1975B0015CB34 /* CountryImagesCollectionViewCell.h */,
+				59C8B5ED1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m */,
+				59C8B5EE1FD1975B0015CB34 /* CountryImagesCollectionViewCell.xib */,
+			);
+			path = "Country Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,9 +439,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C8B5F01FD1975B0015CB34 /* CountryImagesCollectionViewCell.xib in Resources */,
 				5998F37C1FCDAC6000E88012 /* CountryTableViewCell.xib in Resources */,
 				5998F3491FCDA71700E88012 /* LaunchScreen.storyboard in Resources */,
+				59C8B5EA1FD195D60015CB34 /* CountryAboutTableViewCell.xib in Resources */,
 				5998F3461FCDA71700E88012 /* Assets.xcassets in Resources */,
+				59C8B5E41FD1947D0015CB34 /* CountryInfoTableViewCell.xib in Resources */,
 				5998F3411FCDA71700E88012 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,16 +470,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C8B5E31FD1947D0015CB34 /* CountryInfoTableViewCell.m in Sources */,
 				5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */,
 				5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */,
+				59C8B5EF1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m in Sources */,
 				5998F3A01FD061E600E88012 /* ImageDownloader.m in Sources */,
 				5998F34C1FCDA71700E88012 /* main.m in Sources */,
+				59C8B5E91FD195D60015CB34 /* CountryAboutTableViewCell.m in Sources */,
 				5998F39D1FD0449E00E88012 /* CountryParser.m in Sources */,
 				5998F3741FCDA79200E88012 /* CountryTableViewController.m in Sources */,
 				5998F3441FCDA71700E88012 /* FlatstackTask.xcdatamodeld in Sources */,
 				5998F38F1FD031C700E88012 /* LoadCountryRequest.m in Sources */,
 				5998F37B1FCDAC6000E88012 /* CountryTableViewCell.m in Sources */,
 				5998F3771FCDA7FB00E88012 /* Country.m in Sources */,
+				59C8B5DD1FD193AB0015CB34 /* CountryDetailsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

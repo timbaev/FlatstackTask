@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CountryImagesCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="177"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="177"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uOI-wK-xVC">
+                        <rect key="frame" x="0.0" y="0.0" width="336" height="177"/>
+                    </imageView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="859-ZD-WMs">
+                        <rect key="frame" x="148.5" y="132" width="39" height="37"/>
+                    </pageControl>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="859-ZD-WMs" secondAttribute="bottom" constant="8" id="O2d-YV-i4E"/>
+                <constraint firstAttribute="bottom" secondItem="uOI-wK-xVC" secondAttribute="bottom" id="cU3-Bd-P4N"/>
+                <constraint firstAttribute="trailing" secondItem="uOI-wK-xVC" secondAttribute="trailing" id="fnS-pk-96k"/>
+                <constraint firstItem="uOI-wK-xVC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gfF-oG-F31"/>
+                <constraint firstItem="uOI-wK-xVC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hTu-jd-gHK"/>
+                <constraint firstItem="859-ZD-WMs" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="wn3-nn-tJa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="336" height="177"/>
+            <point key="canvasLocation" x="-2" y="17.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
