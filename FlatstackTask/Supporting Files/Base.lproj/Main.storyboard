@@ -41,37 +41,36 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1lx-gp-AG1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="6K4-H6-i4n"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cjQ-Sy-5Yr">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cjQ-Sy-5Yr">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dkx-Lm-b04">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L73-yg-wxk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kGg-9l-rqp" id="6jo-Iu-Nv9"/>
+                                    <outlet property="delegate" destination="kGg-9l-rqp" id="7Pm-bh-zVy"/>
+                                </connections>
                             </tableView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="DtH-oG-jbL">
+                                <rect key="frame" x="168" y="263" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="DtH-oG-jbL" firstAttribute="top" secondItem="1lx-gp-AG1" secondAttribute="bottom" constant="-37" id="A8p-ar-3hX"/>
                             <constraint firstItem="1lx-gp-AG1" firstAttribute="leading" secondItem="vD4-pm-u1V" secondAttribute="leading" id="H41-yq-AZ5"/>
                             <constraint firstItem="L73-yg-wxk" firstAttribute="top" secondItem="9Sk-fI-RuP" secondAttribute="top" id="Mw8-F3-Rjh"/>
                             <constraint firstItem="1lx-gp-AG1" firstAttribute="top" secondItem="9Sk-fI-RuP" secondAttribute="top" id="SFs-wO-RKT"/>
+                            <constraint firstItem="DtH-oG-jbL" firstAttribute="centerX" secondItem="9Sk-fI-RuP" secondAttribute="centerX" id="Yv6-JG-cLx"/>
                             <constraint firstItem="L73-yg-wxk" firstAttribute="bottom" secondItem="vD4-pm-u1V" secondAttribute="bottom" id="ZPD-Fp-joi"/>
                             <constraint firstItem="1lx-gp-AG1" firstAttribute="trailing" secondItem="vD4-pm-u1V" secondAttribute="trailing" id="j3G-GT-2XC"/>
                             <constraint firstItem="L73-yg-wxk" firstAttribute="trailing" secondItem="vD4-pm-u1V" secondAttribute="trailing" id="uDH-m8-HZF"/>
@@ -81,12 +80,14 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="1lx-gp-AG1" id="3zb-lg-wUH"/>
+                        <outlet property="collectionViewTopConstraint" destination="SFs-wO-RKT" id="du5-DH-ACF"/>
+                        <outlet property="pageControl" destination="DtH-oG-jbL" id="uh2-Pd-P3K"/>
                         <outlet property="tableView" destination="L73-yg-wxk" id="xNd-Hk-bS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13V-5d-hIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1484" y="107"/>
+            <point key="canvasLocation" x="1484" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qXG-I0-Hnj">

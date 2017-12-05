@@ -63,7 +63,7 @@ NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if (segue.identifier == DETAILS_SEGUE_IDENTIFIER) {
+    if ([segue.identifier isEqualToString:DETAILS_SEGUE_IDENTIFIER]) {
         CountryDetailsViewController *detailsVC = segue.destinationViewController;
         detailsVC.country = sender;
     }

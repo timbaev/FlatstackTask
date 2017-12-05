@@ -8,6 +8,10 @@
 
 #import "CountryAboutTableViewCell.h"
 
+@interface CountryAboutTableViewCell()
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@end
+
 @implementation CountryAboutTableViewCell
 
 - (void)awakeFromNib {
@@ -16,7 +20,7 @@
 }
 
 - (void)prepareCellWithDescription:(NSString *)description {
-    
+    self.descriptionLabel.text = description;
 }
 
 @end

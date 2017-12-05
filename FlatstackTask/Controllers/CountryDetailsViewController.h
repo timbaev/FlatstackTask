@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Country.h"
 
-@interface CountryDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CountryDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) Country *country;
 @end

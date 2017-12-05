@@ -21,17 +21,17 @@
 }
 
 - (void)prepareCellWithCountry:(Country *)country row:(NSInteger)row {
-    if (row == 1) {
+    if (row == 0) {
         self.iconImageView.image = [UIImage imageNamed:@"star"];
         self.infoLabel.text = @"Capital";
         self.valueLabel.text = country.capital;
     }
-    if (row == 2) {
+    if (row == 1) {
         self.iconImageView.image = [UIImage imageNamed:@"face"];
         self.infoLabel.text = @"Population";
         self.valueLabel.text = [NSString stringWithFormat:@"%ld", (long)country.population];
     }
-    if (row == 3) {
+    if (row == 2) {
         self.iconImageView.image = [UIImage imageNamed:@"earth"];
         self.infoLabel.text = @"Continent";
         self.valueLabel.text = country.continent;

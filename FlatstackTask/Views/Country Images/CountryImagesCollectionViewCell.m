@@ -8,11 +8,18 @@
 
 #import "CountryImagesCollectionViewCell.h"
 
+@interface CountryImagesCollectionViewCell()
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@end
+
 @implementation CountryImagesCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+}
+
+- (void)prepareCellWithImage:(UIImage *)image {
+    self.photoImageView.image = image;
 }
 
 @end

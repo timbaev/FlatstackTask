@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CountryImagesCollectionViewCell : UICollectionViewCell
-
+- (void)prepareCellWithImage:(UIImage *)image;
 @end
