@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Country.h"
 
 @interface CountryInfoTableViewCell : UITableViewCell
-
+- (void)prepareCellWithCountry:(Country*)country row:(NSInteger)row;
 @end

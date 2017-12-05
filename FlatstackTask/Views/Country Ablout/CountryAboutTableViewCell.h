@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CountryAboutTableViewCell : UITableViewCell
-
+- (void)prepareCellWithDescription:(NSString *)description;
 @end

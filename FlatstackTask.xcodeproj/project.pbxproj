@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5991FC821FD6D70C00250D78 /* CountryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */; };
 		5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F33A1FCDA71700E88012 /* AppDelegate.m */; };
 		5998F3411FCDA71700E88012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5998F33F1FCDA71700E88012 /* Main.storyboard */; };
 		5998F3441FCDA71700E88012 /* FlatstackTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3421FCDA71700E88012 /* FlatstackTask.xcdatamodeld */; };
@@ -23,7 +24,6 @@
 		5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3951FD0379B00E88012 /* ApiProvider.m */; };
 		5998F39D1FD0449E00E88012 /* CountryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F39C1FD0449E00E88012 /* CountryParser.m */; };
 		5998F3A01FD061E600E88012 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F39F1FD061E600E88012 /* ImageDownloader.m */; };
-		59C8B5DD1FD193AB0015CB34 /* CountryDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B5DC1FD193AB0015CB34 /* CountryDetailsTableViewController.m */; };
 		59C8B5E31FD1947D0015CB34 /* CountryInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B5E11FD1947D0015CB34 /* CountryInfoTableViewCell.m */; };
 		59C8B5E41FD1947D0015CB34 /* CountryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C8B5E21FD1947D0015CB34 /* CountryInfoTableViewCell.xib */; };
 		59C8B5E91FD195D60015CB34 /* CountryAboutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B5E71FD195D60015CB34 /* CountryAboutTableViewCell.m */; };
@@ -50,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5991FC801FD6D70C00250D78 /* CountryDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsViewController.h; sourceTree = "<group>"; };
+		5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsViewController.m; sourceTree = "<group>"; };
 		5998F3361FCDA71700E88012 /* FlatstackTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatstackTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5998F3391FCDA71700E88012 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5998F33A1FCDA71700E88012 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,8 +86,6 @@
 		5998F39C1FD0449E00E88012 /* CountryParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryParser.m; sourceTree = "<group>"; };
 		5998F39E1FD061E600E88012 /* ImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		5998F39F1FD061E600E88012 /* ImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
-		59C8B5DB1FD193AB0015CB34 /* CountryDetailsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsTableViewController.h; sourceTree = "<group>"; };
-		59C8B5DC1FD193AB0015CB34 /* CountryDetailsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsTableViewController.m; sourceTree = "<group>"; };
 		59C8B5E01FD1947D0015CB34 /* CountryInfoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryInfoTableViewCell.h; sourceTree = "<group>"; };
 		59C8B5E11FD1947D0015CB34 /* CountryInfoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryInfoTableViewCell.m; sourceTree = "<group>"; };
 		59C8B5E21FD1947D0015CB34 /* CountryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -200,8 +200,8 @@
 			children = (
 				5998F3721FCDA79200E88012 /* CountryTableViewController.h */,
 				5998F3731FCDA79200E88012 /* CountryTableViewController.m */,
-				59C8B5DB1FD193AB0015CB34 /* CountryDetailsTableViewController.h */,
-				59C8B5DC1FD193AB0015CB34 /* CountryDetailsTableViewController.m */,
+				5991FC801FD6D70C00250D78 /* CountryDetailsViewController.h */,
+				5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -474,6 +474,7 @@
 				5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */,
 				5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */,
 				59C8B5EF1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m in Sources */,
+				5991FC821FD6D70C00250D78 /* CountryDetailsViewController.m in Sources */,
 				5998F3A01FD061E600E88012 /* ImageDownloader.m in Sources */,
 				5998F34C1FCDA71700E88012 /* main.m in Sources */,
 				59C8B5E91FD195D60015CB34 /* CountryAboutTableViewCell.m in Sources */,
@@ -483,7 +484,6 @@
 				5998F38F1FD031C700E88012 /* LoadCountryRequest.m in Sources */,
 				5998F37B1FCDAC6000E88012 /* CountryTableViewCell.m in Sources */,
 				5998F3771FCDA7FB00E88012 /* Country.m in Sources */,
-				59C8B5DD1FD193AB0015CB34 /* CountryDetailsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

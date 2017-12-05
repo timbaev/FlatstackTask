@@ -14,6 +14,7 @@
 #import "ApiProvider.h"
 #import "Constants.h"
 #import "CountryParser.h"
+#import "CountryDetailsViewController.h"
 
 @interface CountryTableViewController ()
 @property (nonatomic, strong) NSMutableArray<Country *> *countries;
@@ -23,6 +24,7 @@
 
 NSString *const CounrtyCellIdentifier = @"countryCell";
 NSString *const FIRST_END_POINT = @"NikitaAsabin/799e4502c9fc3e0ea7af439b2dfd88fa/raw/145611f98d4ef72b758966f00b25552a78437212/page1.json";
+NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,6 +62,13 @@ NSString *const FIRST_END_POINT = @"NikitaAsabin/799e4502c9fc3e0ea7af439b2dfd88f
     }];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if (segue.identifier == DETAILS_SEGUE_IDENTIFIER) {
+        CountryDetailsViewController *detailsVC = segue.destinationViewController;
+        detailsVC.country = sender;
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -77,7 +86,7 @@ NSString *const FIRST_END_POINT = @"NikitaAsabin/799e4502c9fc3e0ea7af439b2dfd88f
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [self performSegueWithIdentifier:DETAILS_SEGUE_IDENTIFIER sender:self.countries[indexPath.row]];
 }
 
 @end
