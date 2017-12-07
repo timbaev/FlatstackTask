@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewTopConstraint;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
+
 @property (nonatomic, assign) CGFloat lastContentOffset;
 @end
 
@@ -47,6 +49,7 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     [self.tableView registerNib:aboutNibCell forCellReuseIdentifier:ABOUT_CELL_IDENTIFIER];
     
     CGFloat collectionViewHeight = self.collectionView.frame.size.height;
+    //self.tableViewTopConstraint.constant = collectionViewHeight;
     self.tableView.contentInset = UIEdgeInsetsMake(collectionViewHeight, 0, 0, 0);
 }
 
@@ -67,7 +70,7 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 100;
 }
 
 
@@ -88,12 +91,19 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"Scroll triggered! Content offset is %ld", (long)scrollView.contentOffset.y);
     if (scrollView.contentOffset.y < 0) {
         CGFloat collectionViewOffset = self.collectionViewTopConstraint.constant;
         CGFloat offset = (scrollView.contentOffset.y + self.collectionView.frame.size.height + collectionViewOffset) / 2;
-        
-        self.collectionViewTopConstraint.constant -= offset;
+        NSLog(@"Changed image top to: %ld", (long)offset);
+
+        self.collectionViewTopConstraint.constant = -offset;
     }
+    
+    
+//    CGFloat offset = self.collectionView.frame.size.height - scrollView.contentOffset.y;
+//    self.tableViewTopConstraint.constant = offset;
+//    self.collectionViewTopConstraint.constant = -scrollView.contentOffset.y / 2;
 }
 
 #pragma mark - Collection view data sorce
