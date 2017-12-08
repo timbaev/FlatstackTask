@@ -42,6 +42,7 @@ NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
     
     UINib *countryCellNib = [UINib nibWithNibName:@"CountryTableViewCell" bundle:nil];
     [self.tableView registerNib:countryCellNib forCellReuseIdentifier:CounrtyCellIdentifier];
+    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)loadCountries {

@@ -12,10 +12,11 @@
 #import "CountryAboutTableViewCell.h"
 #import "Country.h"
 #import "ImageDownloader.h"
+#import "ResponderTableView.h"
 
 @interface CountryDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet ResponderTableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewTopConstraint;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
@@ -49,7 +50,7 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     [self.tableView registerNib:aboutNibCell forCellReuseIdentifier:ABOUT_CELL_IDENTIFIER];
     
     CGFloat collectionViewHeight = self.collectionView.frame.size.height;
-    //self.tableViewTopConstraint.constant = collectionViewHeight;
+    self.tableView.responderHeight = collectionViewHeight;
     self.tableView.contentInset = UIEdgeInsetsMake(collectionViewHeight, 0, 0, 0);
 }
 
@@ -99,11 +100,6 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
 
         self.collectionViewTopConstraint.constant = -offset;
     }
-    
-    
-//    CGFloat offset = self.collectionView.frame.size.height - scrollView.contentOffset.y;
-//    self.tableViewTopConstraint.constant = offset;
-//    self.collectionViewTopConstraint.constant = -scrollView.contentOffset.y / 2;
 }
 
 #pragma mark - Collection view data sorce
