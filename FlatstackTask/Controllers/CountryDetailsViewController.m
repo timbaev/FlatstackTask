@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
 
 @property (nonatomic, assign) CGFloat lastContentOffset;
+@property (nonatomic) CGFloat collectionViewHeight;
+@property (nonatomic) CGFloat navBarHeight;
+@property (nonatomic) CGFloat statusBarHeight;
 @end
 
 @implementation CountryDetailsViewController 
@@ -32,8 +35,18 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.collectionViewHeight = self.collectionView.frame.size.height;
+    self.navBarHeight = self.navigationController.navigationBar.frame.size.height;
+    self.statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    
     [self prepareTableView];
     [self prepareCollectionView];
+    [self prepapreNavigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
 }
 
 #pragma mark - Prepare methods
@@ -49,9 +62,8 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     [self.tableView registerNib:detailNibCell forCellReuseIdentifier:DETAIL_CELL_IDENTIFIER];
     [self.tableView registerNib:aboutNibCell forCellReuseIdentifier:ABOUT_CELL_IDENTIFIER];
     
-    CGFloat collectionViewHeight = self.collectionView.frame.size.height;
-    self.tableView.responderHeight = collectionViewHeight;
-    self.tableView.contentInset = UIEdgeInsetsMake(collectionViewHeight, 0, 0, 0);
+    self.tableView.responderHeight = self.collectionViewHeight;
+    self.tableView.contentInset = UIEdgeInsetsMake(self.collectionViewHeight - self.navBarHeight - self.statusBarHeight, 0, 0, 0);
 }
 
 - (void)prepareCollectionView {
@@ -62,6 +74,15 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     
     UINib *photoNibCell = [UINib nibWithNibName:@"CountryImagesCollectionViewCell" bundle:nil];
     [self.collectionView registerNib:photoNibCell forCellWithReuseIdentifier:IMAGES_CELL_IDENTIFIER];
+}
+
+- (void)prepapreNavigationBar {
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
 }
 
 #pragma mark - Table view data source
@@ -95,10 +116,10 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     NSLog(@"Scroll triggered! Content offset is %ld", (long)scrollView.contentOffset.y);
     if (scrollView.contentOffset.y < 0) {
         CGFloat collectionViewOffset = self.collectionViewTopConstraint.constant;
-        CGFloat offset = (scrollView.contentOffset.y + self.collectionView.frame.size.height + collectionViewOffset) / 2;
+        CGFloat offset = (scrollView.contentOffset.y + self.collectionViewHeight + collectionViewOffset) / 2;
         NSLog(@"Changed image top to: %ld", (long)offset);
 
-        self.collectionViewTopConstraint.constant = -offset;
+        self.collectionViewTopConstraint.constant = -offset - self.navBarHeight - self.statusBarHeight;
     }
 }
 

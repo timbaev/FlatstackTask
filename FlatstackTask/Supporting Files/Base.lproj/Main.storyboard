@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1lx-gp-AG1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="6K4-H6-i4n"/>
                                 </constraints>
@@ -53,7 +53,7 @@
                                 <cells/>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="DtH-oG-jbL">
-                                <rect key="frame" x="168" y="327" width="39" height="37"/>
+                                <rect key="frame" x="168" y="263" width="39" height="37"/>
                             </pageControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L73-yg-wxk" customClass="ResponderTableView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
@@ -68,7 +68,7 @@
                         <constraints>
                             <constraint firstItem="DtH-oG-jbL" firstAttribute="top" secondItem="1lx-gp-AG1" secondAttribute="bottom" constant="-37" id="A8p-ar-3hX"/>
                             <constraint firstItem="1lx-gp-AG1" firstAttribute="leading" secondItem="9Sk-fI-RuP" secondAttribute="leading" id="H41-yq-AZ5"/>
-                            <constraint firstItem="1lx-gp-AG1" firstAttribute="top" secondItem="vD4-pm-u1V" secondAttribute="top" id="HPj-r8-TuD"/>
+                            <constraint firstItem="1lx-gp-AG1" firstAttribute="top" secondItem="9Sk-fI-RuP" secondAttribute="top" id="HPj-r8-TuD"/>
                             <constraint firstItem="DtH-oG-jbL" firstAttribute="centerX" secondItem="9Sk-fI-RuP" secondAttribute="centerX" id="Yv6-JG-cLx"/>
                             <constraint firstItem="L73-yg-wxk" firstAttribute="bottom" secondItem="vD4-pm-u1V" secondAttribute="bottom" id="ZPD-Fp-joi"/>
                             <constraint firstItem="1lx-gp-AG1" firstAttribute="trailing" secondItem="9Sk-fI-RuP" secondAttribute="trailing" id="j3G-GT-2XC"/>
@@ -93,7 +93,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qXG-I0-Hnj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zki-1v-wtb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootNavController" automaticallyAdjustsScrollViewInsets="NO" id="Zki-1v-wtb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="55O-Ut-eOT">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
