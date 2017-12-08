@@ -10,5 +10,5 @@
 #import "Country.h"
 
 @interface CountryParser : NSObject
-+ (NSArray<Country *> *)parseWith:(NSDictionary *)dictionary;
++ (NSArray<Country *> *)parseWith:(NSData *)data;
 @end

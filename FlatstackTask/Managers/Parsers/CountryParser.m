@@ -11,7 +11,10 @@
 
 @implementation CountryParser
 
-+ (NSArray<Country *> *)parseWith:(NSDictionary *)dictionary {
++ (NSArray<Country *> *)parseWith:(NSData *)data {
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    if (![NSJSONSerialization isValidJSONObject:dictionary]) return nil;
+    
     NSMutableArray<Country *> *countries = [NSMutableArray new];
     
     NSArray *array = [dictionary objectForKey:@"countries"];

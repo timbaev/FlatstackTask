@@ -51,14 +51,10 @@ NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
     __weak CountryTableViewController *weakSelf = self;
     [provider makeRequest:request completionBlock:^(NSData *data) {
         if (data != nil) {
-            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            if ([NSJSONSerialization isValidJSONObject:responseDictionary]) {
-                weakSelf.countries = [[CountryParser parseWith:responseDictionary] mutableCopy];
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [weakSelf.tableView reloadData];
-                });
-            }
+            weakSelf.countries = [[CountryParser parseWith:data] mutableCopy];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.tableView reloadData];
+            });
         }
     }];
 }
