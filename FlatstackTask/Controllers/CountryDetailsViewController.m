@@ -42,6 +42,7 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     [self prepareTableView];
     [self prepareCollectionView];
     [self prepapreNavigationBar];
+    [self preparePageControl];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -64,11 +65,14 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     self.tableView.contentInset = UIEdgeInsetsMake(self.collectionViewHeight - self.navBarHeight - self.statusBarHeight, 0, 0, 0);
 }
 
+- (void)preparePageControl {
+    self.pageControl.hidesForSinglePage = true;
+    self.pageControl.numberOfPages = self.country.imagesURL.count;
+}
+
 - (void)prepareCollectionView {
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    
-    self.pageControl.hidesForSinglePage = true;
     
     UINib *photoNibCell = [UINib nibWithNibName:@"CountryImagesCollectionViewCell" bundle:nil];
     [self.collectionView registerNib:photoNibCell forCellWithReuseIdentifier:IMAGES_CELL_IDENTIFIER];
@@ -90,7 +94,7 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return 4;
 }
 
 
@@ -145,8 +149,9 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.pageControl.currentPage = indexPath.section;
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    CGFloat pageWidth = self.collectionView.frame.size.width;
+    self.pageControl.currentPage = self.collectionView.contentOffset.x / pageWidth;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
