@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Country Table View Controller-->
+        <!--Countries-->
         <scene sceneID="JPI-pa-D3k">
             <objects>
                 <tableViewController id="Sdb-1T-mJe" customClass="CountryTableViewController" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="Sdb-1T-mJe" id="70t-pg-KEx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="wc3-Dj-mpz"/>
+                    <navigationItem key="navigationItem" title="Countries" id="wc3-Dj-mpz"/>
                     <connections>
                         <segue destination="kGg-9l-rqp" kind="show" identifier="detailsSegue" id="aM6-kp-eot"/>
                     </connections>
@@ -34,17 +34,18 @@
         <!--Country Details View Controller-->
         <scene sceneID="UVz-dG-RjW">
             <objects>
-                <viewController id="kGg-9l-rqp" customClass="CountryDetailsViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="kGg-9l-rqp" customClass="CountryDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Sk-fI-RuP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1lx-gp-AG1">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PdI-kf-x4Y">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="6K4-H6-i4n"/>
+                                    <constraint firstAttribute="height" constant="300" id="azW-VC-R3B"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cjQ-Sy-5Yr">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xwu-HK-oX6">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -66,21 +67,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DtH-oG-jbL" firstAttribute="top" secondItem="1lx-gp-AG1" secondAttribute="bottom" constant="-37" id="A8p-ar-3hX"/>
-                            <constraint firstItem="1lx-gp-AG1" firstAttribute="leading" secondItem="9Sk-fI-RuP" secondAttribute="leading" id="H41-yq-AZ5"/>
-                            <constraint firstItem="1lx-gp-AG1" firstAttribute="top" secondItem="9Sk-fI-RuP" secondAttribute="top" id="HPj-r8-TuD"/>
+                            <constraint firstItem="DtH-oG-jbL" firstAttribute="bottom" secondItem="PdI-kf-x4Y" secondAttribute="bottom" id="IVZ-4d-m3N"/>
                             <constraint firstItem="DtH-oG-jbL" firstAttribute="centerX" secondItem="9Sk-fI-RuP" secondAttribute="centerX" id="Yv6-JG-cLx"/>
                             <constraint firstItem="L73-yg-wxk" firstAttribute="bottom" secondItem="vD4-pm-u1V" secondAttribute="bottom" id="ZPD-Fp-joi"/>
-                            <constraint firstItem="1lx-gp-AG1" firstAttribute="trailing" secondItem="9Sk-fI-RuP" secondAttribute="trailing" id="j3G-GT-2XC"/>
+                            <constraint firstItem="vD4-pm-u1V" firstAttribute="trailing" secondItem="PdI-kf-x4Y" secondAttribute="trailing" id="aFl-Hu-fnr"/>
+                            <constraint firstItem="PdI-kf-x4Y" firstAttribute="top" secondItem="9Sk-fI-RuP" secondAttribute="top" id="aLf-bk-eYQ"/>
                             <constraint firstItem="L73-yg-wxk" firstAttribute="top" secondItem="vD4-pm-u1V" secondAttribute="top" id="miA-8l-Qqr"/>
+                            <constraint firstItem="PdI-kf-x4Y" firstAttribute="leading" secondItem="vD4-pm-u1V" secondAttribute="leading" id="pxJ-GC-Tv5"/>
                             <constraint firstItem="L73-yg-wxk" firstAttribute="trailing" secondItem="vD4-pm-u1V" secondAttribute="trailing" id="uDH-m8-HZF"/>
                             <constraint firstItem="L73-yg-wxk" firstAttribute="leading" secondItem="vD4-pm-u1V" secondAttribute="leading" id="vea-d8-S8W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vD4-pm-u1V"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="1lx-gp-AG1" id="3zb-lg-wUH"/>
-                        <outlet property="collectionViewTopConstraint" destination="HPj-r8-TuD" id="Sro-V2-vP9"/>
+                        <outlet property="collectionView" destination="PdI-kf-x4Y" id="1qZ-Gb-y8z"/>
+                        <outlet property="collectionViewTopConstraint" destination="aLf-bk-eYQ" id="tu4-hD-7Uz"/>
                         <outlet property="pageControl" destination="DtH-oG-jbL" id="uh2-Pd-P3K"/>
                         <outlet property="tableView" destination="L73-yg-wxk" id="xNd-Hk-bS9"/>
                         <outlet property="tableViewTopConstraint" destination="miA-8l-Qqr" id="7Zx-az-Ab4"/>

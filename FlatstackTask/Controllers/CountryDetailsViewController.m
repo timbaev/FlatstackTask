@@ -54,8 +54,6 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
 - (void)prepareTableView {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     UINib *detailNibCell = [UINib nibWithNibName:@"CountryInfoTableViewCell" bundle:nil];
     UINib *aboutNibCell = [UINib nibWithNibName:@"CountryAboutTableViewCell" bundle:nil];
     
@@ -113,13 +111,14 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"Scroll triggered! Content offset is %ld", (long)scrollView.contentOffset.y);
+    NSLog(@"Content offset is %ld", (long)scrollView.contentOffset.y);
     if (scrollView.contentOffset.y < 0) {
         CGFloat collectionViewOffset = self.collectionViewTopConstraint.constant;
-        CGFloat offset = (scrollView.contentOffset.y + self.collectionViewHeight + collectionViewOffset) / 2;
+        CGFloat offset = (scrollView.contentOffset.y + self.collectionViewHeight + collectionViewOffset - self.navBarHeight - self.statusBarHeight) / 2;
+        NSLog(@"CollectionViewOffset: %ld", (long)collectionViewOffset);
         NSLog(@"Changed image top to: %ld", (long)offset);
 
-        self.collectionViewTopConstraint.constant = -offset - self.navBarHeight - self.statusBarHeight;
+        self.collectionViewTopConstraint.constant = -offset;
     }
 }
 
