@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Storable.h"
 
-@interface Country : NSObject
+@interface Country : NSObject<Storable>
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *continent;

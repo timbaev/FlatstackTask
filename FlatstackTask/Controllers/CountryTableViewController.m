@@ -15,9 +15,12 @@
 #import "Constants.h"
 #import "CountryParser.h"
 #import "CountryDetailsViewController.h"
+#import "Repository.h"
+#import "CountryRepository.h"
 
 @interface CountryTableViewController ()
 @property (nonatomic, strong) NSMutableArray<Country *> *countries;
+@property (nonatomic, strong) id<Repository> repository;
 @end
 
 @implementation CountryTableViewController
@@ -29,6 +32,7 @@ NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.countries = [[NSMutableArray alloc] init];
+    self.repository = [[CountryRepository alloc] init];
     
     [self prepareTableView];
     [self loadCountries];
@@ -51,10 +55,14 @@ NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
     __weak CountryTableViewController *weakSelf = self;
     [provider makeRequest:request completionBlock:^(NSData *data) {
         if (data != nil) {
+            [(CountryRepository *)weakSelf.repository deleteAll];
             weakSelf.countries = [[CountryParser parseWith:data] mutableCopy];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf.tableView reloadData];
             });
+            for (Country *country in weakSelf.countries) {
+                [weakSelf.repository insertWithModel:country];
+            }
         }
     }];
 }

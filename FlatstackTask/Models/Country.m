@@ -7,6 +7,8 @@
 //
 
 #import "Country.h"
+#import "CountryManaged+CoreDataClass.h"
+#import "CoreDataManager.h"
 
 @implementation Country
 
@@ -24,6 +26,18 @@
     }
     
     return self;
+}
+
+- (NSManagedObject *)toManagedObject {
+    NSManagedObjectContext *viewContext = [[CoreDataManager sharedManager] viewContext];
+    CountryManaged *countryManaged = [[CountryManaged alloc] initWithContext:viewContext];
+    countryManaged.name = self.name;
+    countryManaged.continent = self.continent;
+    countryManaged.capital = self.capital;
+    countryManaged.population = self.population;
+    countryManaged.shortDescript = self.shortDescription;
+    countryManaged.fullDescription = self.fullDescription;
+    return countryManaged;
 }
 
 @end
