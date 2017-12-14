@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		594767061FDAC83200A9B56B /* ResponderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 594767051FDAC83200A9B56B /* ResponderTableView.m */; };
+		5953AD851FE2B0C700BF37B2 /* CountryManaged+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5953AD831FE2B0C700BF37B2 /* CountryManaged+CoreDataClass.m */; };
+		5953AD861FE2B0C700BF37B2 /* CountryManaged+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5953AD841FE2B0C700BF37B2 /* CountryManaged+CoreDataProperties.m */; };
+		5953AD8A1FE2B12300BF37B2 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5953AD891FE2B12300BF37B2 /* CoreDataManager.m */; };
 		5991FC821FD6D70C00250D78 /* CountryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */; };
 		5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F33A1FCDA71700E88012 /* AppDelegate.m */; };
 		5998F3411FCDA71700E88012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5998F33F1FCDA71700E88012 /* Main.storyboard */; };
@@ -53,6 +56,13 @@
 /* Begin PBXFileReference section */
 		594767041FDAC83200A9B56B /* ResponderTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponderTableView.h; sourceTree = "<group>"; };
 		594767051FDAC83200A9B56B /* ResponderTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderTableView.m; sourceTree = "<group>"; };
+		5953AD781FE2A8F600BF37B2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5953AD811FE2B0C700BF37B2 /* CountryManaged+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountryManaged+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5953AD821FE2B0C700BF37B2 /* CountryManaged+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountryManaged+CoreDataClass.h"; sourceTree = "<group>"; };
+		5953AD831FE2B0C700BF37B2 /* CountryManaged+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CountryManaged+CoreDataClass.m"; sourceTree = "<group>"; };
+		5953AD841FE2B0C700BF37B2 /* CountryManaged+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CountryManaged+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5953AD881FE2B12300BF37B2 /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		5953AD891FE2B12300BF37B2 /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		5991FC801FD6D70C00250D78 /* CountryDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsViewController.h; sourceTree = "<group>"; };
 		5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsViewController.m; sourceTree = "<group>"; };
 		5998F3361FCDA71700E88012 /* FlatstackTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatstackTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +135,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5953AD801FE2B02600BF37B2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5953AD811FE2B0C700BF37B2 /* CountryManaged+CoreDataProperties.h */,
+				5953AD821FE2B0C700BF37B2 /* CountryManaged+CoreDataClass.h */,
+				5953AD831FE2B0C700BF37B2 /* CountryManaged+CoreDataClass.m */,
+				5953AD841FE2B0C700BF37B2 /* CountryManaged+CoreDataProperties.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5953AD871FE2B10400BF37B2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5953AD881FE2B12300BF37B2 /* CoreDataManager.h */,
+				5953AD891FE2B12300BF37B2 /* CoreDataManager.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		5998F32D1FCDA71700E88012 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +211,7 @@
 		5998F36E1FCDA75A00E88012 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5953AD801FE2B02600BF37B2 /* CoreData */,
 				5998F3751FCDA7FB00E88012 /* Country.h */,
 				5998F3761FCDA7FB00E88012 /* Country.m */,
 			);
@@ -248,6 +279,7 @@
 		5998F38A1FD02A3000E88012 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				5953AD871FE2B10400BF37B2 /* CoreData */,
 				5998F39A1FD0448700E88012 /* Parsers */,
 				5998F3921FD0375A00E88012 /* Providers */,
 				5998F38B1FD02A3800E88012 /* Requests */,
@@ -294,6 +326,7 @@
 		59C8B5D11FD17BEE0015CB34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5953AD781FE2A8F600BF37B2 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -479,6 +512,7 @@
 				5998F3961FD0379B00E88012 /* ApiProvider.m in Sources */,
 				5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */,
 				59C8B5EF1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m in Sources */,
+				5953AD861FE2B0C700BF37B2 /* CountryManaged+CoreDataProperties.m in Sources */,
 				594767061FDAC83200A9B56B /* ResponderTableView.m in Sources */,
 				5991FC821FD6D70C00250D78 /* CountryDetailsViewController.m in Sources */,
 				5998F3A01FD061E600E88012 /* ImageDownloader.m in Sources */,
@@ -486,9 +520,11 @@
 				59C8B5E91FD195D60015CB34 /* CountryAboutTableViewCell.m in Sources */,
 				5998F39D1FD0449E00E88012 /* CountryParser.m in Sources */,
 				5998F3741FCDA79200E88012 /* CountryTableViewController.m in Sources */,
+				5953AD8A1FE2B12300BF37B2 /* CoreDataManager.m in Sources */,
 				5998F3441FCDA71700E88012 /* FlatstackTask.xcdatamodeld in Sources */,
 				5998F38F1FD031C700E88012 /* LoadCountryRequest.m in Sources */,
 				5998F37B1FCDAC6000E88012 /* CountryTableViewCell.m in Sources */,
+				5953AD851FE2B0C700BF37B2 /* CountryManaged+CoreDataClass.m in Sources */,
 				5998F3771FCDA7FB00E88012 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
