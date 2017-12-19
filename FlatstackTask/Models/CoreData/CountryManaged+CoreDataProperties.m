@@ -21,7 +21,7 @@
 @dynamic population;
 @dynamic shortDescript;
 @dynamic fullDescription;
-@dynamic images;
-@dynamic flagImage;
+@dynamic imagesURL;
+@dynamic flagImageURL;
 
 @end

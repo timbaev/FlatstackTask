@@ -8,6 +8,8 @@
 
 #import "BaseRepository.h"
 #import "CoreDataManager.h"
+#import "Country.h"
+#import "CountryManaged+CoreDataClass.h"
 
 @implementation BaseRepository
 
@@ -15,7 +17,24 @@
     return true;
 }
 
-- (NSArray<id<Storable>> *)getAll {
+- (NSArray<id<Storable>> *)getAllWithClass:(Class)class {
+    if ([Country class] == class) {
+        NSManagedObjectContext *viewContext = [[CoreDataManager sharedManager] viewContext];
+        NSFetchRequest *request = [CountryManaged fetchRequest];
+        NSError *error = nil;
+        NSArray *results = [viewContext executeFetchRequest:request error:&error];
+        
+        if (error == nil) {
+            NSMutableArray *countries = [NSMutableArray array];
+            for (CountryManaged *countryManaged in results) {
+                Country *country = [[Country alloc] initFromManagedObject:countryManaged];
+                [countries addObject:country];
+            }
+            return countries;
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }
     return nil;
 }
 

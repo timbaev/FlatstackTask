@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Storable.h"
+#import "CountryManaged+CoreDataClass.h"
 
 @interface Country : NSObject<Storable>
 
@@ -21,5 +22,6 @@
 @property (nonatomic, strong) NSURL *flagImageURL;
 
 - (id)initWithName:(NSString *)name continent:(NSString *)contentent capital:(NSString *)capital population:(NSUInteger)population shortDescription:(NSString *)shortDescription fullDescription:(NSString *)fullDescription images:(NSMutableArray<NSURL *> *)imagesURL flagImage:(NSURL *)flagImageURL;
+- (id)initFromManagedObject:(CountryManaged *)countryManaged;
 
 @end

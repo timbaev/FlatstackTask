@@ -12,6 +12,16 @@
 
 @implementation Country
 
+/*Convenience initializers*/
+- (id)initFromManagedObject:(CountryManaged *)countryManaged {
+    NSMutableArray<NSURL *> *imagesURL = [NSKeyedUnarchiver unarchiveObjectWithData:countryManaged.imagesURL];
+    NSURL *flagImageURL = [[NSURL alloc] initWithString:countryManaged.flagImageURL];
+    
+    self = [self initWithName:countryManaged.name continent:countryManaged.continent capital:countryManaged.capital population:countryManaged.population shortDescription:countryManaged.shortDescript fullDescription:countryManaged.fullDescription images:imagesURL flagImage:flagImageURL];
+    return self;
+}
+
+/*Designated initializer*/
 - (id)initWithName:(NSString *)name continent:(NSString *)contentent capital:(NSString *)capital population:(NSUInteger)population shortDescription:(NSString *)shortDescription fullDescription:(NSString *)fullDescription images:(NSMutableArray<NSURL *> *)imagesURL flagImage:(NSURL *)flagImageURL {
     self = [super init];
     if (self) {
@@ -37,6 +47,11 @@
     countryManaged.population = self.population;
     countryManaged.shortDescript = self.shortDescription;
     countryManaged.fullDescription = self.fullDescription;
+    countryManaged.flagImageURL = self.flagImageURL.absoluteString;
+    
+    NSData *imagesUrlData = [NSKeyedArchiver archivedDataWithRootObject:self.imagesURL];
+    countryManaged.imagesURL = imagesUrlData;
+    
     return countryManaged;
 }
 

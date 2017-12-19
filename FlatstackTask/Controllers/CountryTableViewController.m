@@ -35,6 +35,7 @@ NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
     self.repository = [[CountryRepository alloc] init];
     
     [self prepareTableView];
+    [self loadSavedCountries];
     [self loadCountries];
 }
 
@@ -65,6 +66,10 @@ NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
             }
         }
     }];
+}
+
+- (void)loadSavedCountries {
+    self.countries = [(NSArray<Country *> *)[self.repository getAllWithClass:Country.class] mutableCopy];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

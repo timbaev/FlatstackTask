@@ -11,7 +11,7 @@
 
 @protocol Repository <NSObject>
 - (BOOL)insertWithModel:(id<Storable>)model;
-- (NSArray<id<Storable>> *)getAll;
+- (NSArray<id<Storable>> *)getAllWithClass:(Class)class;
 - (BOOL)updateModelWithID:(NSInteger)id;
 - (BOOL)deleteModelWithID:(NSInteger)id;
 @end

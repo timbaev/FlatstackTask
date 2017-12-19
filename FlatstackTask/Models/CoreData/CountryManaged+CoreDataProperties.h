@@ -22,8 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int64_t population;
 @property (nullable, nonatomic, copy) NSString *shortDescript;
 @property (nullable, nonatomic, copy) NSString *fullDescription;
-@property (nullable, nonatomic, retain) NSData *images;
-@property (nullable, nonatomic, retain) NSData *flagImage;
+@property (nullable, nonatomic, retain) NSData *imagesURL;
+@property (nullable, nonatomic, copy) NSString *flagImageURL;
 
 @end
 
