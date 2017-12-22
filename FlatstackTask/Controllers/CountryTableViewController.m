@@ -19,8 +19,8 @@
 #import "CountryRepository.h"
 
 @interface CountryTableViewController ()
-@property (nonatomic, strong) NSMutableArray<Country *> *countries;
-@property (nonatomic, strong) id<Repository> repository;
+@property (nonatomic, strong, readwrite) NSMutableArray<Country *> *countries;
+@property (nonatomic, strong, readwrite) id<Repository> repository;
 @end
 
 @implementation CountryTableViewController

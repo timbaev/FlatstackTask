@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Country.h"
+#import "Repository.h"
 
 @interface CountryTableViewController : UITableViewController
-
+@property (nonatomic, strong, readonly) NSMutableArray<Country *> *countries;
 @end

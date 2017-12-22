@@ -21,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewTopConstraint;
 
-@property (nonatomic, assign) CGFloat lastContentOffset;
 @property (nonatomic) CGFloat collectionViewHeight;
 @property (nonatomic) CGFloat navBarHeight;
 @property (nonatomic) CGFloat statusBarHeight;
@@ -41,7 +40,7 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     
     [self prepareTableView];
     [self prepareCollectionView];
-    [self prepapreNavigationBar];
+    [self prepareNavigationBar];
     [self preparePageControl];
 }
 
@@ -78,7 +77,7 @@ NSString *const IMAGES_CELL_IDENTIFIER = @"imagesCellIdentifier";
     [self.collectionView registerNib:photoNibCell forCellWithReuseIdentifier:IMAGES_CELL_IDENTIFIER];
 }
 
-- (void)prepapreNavigationBar {
+- (void)prepareNavigationBar {
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;

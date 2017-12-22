@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Country.h"
+#import "ResponderTableView.h"
 
 @interface CountryDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) Country *country;

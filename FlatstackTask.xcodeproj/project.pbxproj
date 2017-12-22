@@ -13,6 +13,7 @@
 		5953AD991FE2D46E00BF37B2 /* CountryRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 5953AD981FE2D46E00BF37B2 /* CountryRepository.m */; };
 		5953ADA41FE2E3FD00BF37B2 /* CountryManaged+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5953ADA21FE2E3FD00BF37B2 /* CountryManaged+CoreDataClass.m */; };
 		5953ADA51FE2E3FD00BF37B2 /* CountryManaged+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5953ADA31FE2E3FD00BF37B2 /* CountryManaged+CoreDataProperties.m */; };
+		597C48BB1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 597C48BA1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m */; };
 		5991FC821FD6D70C00250D78 /* CountryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */; };
 		5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F33A1FCDA71700E88012 /* AppDelegate.m */; };
 		5998F3411FCDA71700E88012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5998F33F1FCDA71700E88012 /* Main.storyboard */; };
@@ -20,7 +21,7 @@
 		5998F3461FCDA71700E88012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5998F3451FCDA71700E88012 /* Assets.xcassets */; };
 		5998F3491FCDA71700E88012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5998F3471FCDA71700E88012 /* LaunchScreen.storyboard */; };
 		5998F34C1FCDA71700E88012 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F34B1FCDA71700E88012 /* main.m */; };
-		5998F3561FCDA71700E88012 /* FlatstackTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3551FCDA71700E88012 /* FlatstackTaskTests.m */; };
+		5998F3561FCDA71700E88012 /* CountryTableViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3551FCDA71700E88012 /* CountryTableViewControllerTest.m */; };
 		5998F3611FCDA71700E88012 /* FlatstackTaskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3601FCDA71700E88012 /* FlatstackTaskUITests.m */; };
 		5998F3741FCDA79200E88012 /* CountryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3731FCDA79200E88012 /* CountryTableViewController.m */; };
 		5998F3771FCDA7FB00E88012 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3761FCDA7FB00E88012 /* Country.m */; };
@@ -36,6 +37,9 @@
 		59C8B5EA1FD195D60015CB34 /* CountryAboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C8B5E81FD195D60015CB34 /* CountryAboutTableViewCell.xib */; };
 		59C8B5EF1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C8B5ED1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m */; };
 		59C8B5F01FD1975B0015CB34 /* CountryImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C8B5EE1FD1975B0015CB34 /* CountryImagesCollectionViewCell.xib */; };
+		7060C0EF156F4E1CD3137C1B /* libPods-FlatstackTaskUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D7EB7C65DC9CD2F615A043 /* libPods-FlatstackTaskUITests.a */; };
+		AF54F36F2F1A8E37783658AC /* libPods-FlatstackTaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA283493DB6F4B94298430 /* libPods-FlatstackTaskTests.a */; };
+		C4772F725A31FCD8FFF8F312 /* libPods-FlatstackTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E655F704D9207B8BA523714 /* libPods-FlatstackTask.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ACAF55E5F4CF43F4CBBA6A3 /* Pods-FlatstackTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatstackTaskTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlatstackTaskTests/Pods-FlatstackTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		17AA283493DB6F4B94298430 /* libPods-FlatstackTaskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlatstackTaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E655F704D9207B8BA523714 /* libPods-FlatstackTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlatstackTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A37B0A8DAF971D20C28D828 /* Pods-FlatstackTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatstackTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlatstackTask/Pods-FlatstackTask.debug.xcconfig"; sourceTree = "<group>"; };
 		594767041FDAC83200A9B56B /* ResponderTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponderTableView.h; sourceTree = "<group>"; };
 		594767051FDAC83200A9B56B /* ResponderTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderTableView.m; sourceTree = "<group>"; };
 		5953AD781FE2A8F600BF37B2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -71,6 +79,8 @@
 		5953ADA11FE2E3FD00BF37B2 /* CountryManaged+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CountryManaged+CoreDataClass.h"; sourceTree = "<group>"; };
 		5953ADA21FE2E3FD00BF37B2 /* CountryManaged+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CountryManaged+CoreDataClass.m"; sourceTree = "<group>"; };
 		5953ADA31FE2E3FD00BF37B2 /* CountryManaged+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CountryManaged+CoreDataProperties.m"; sourceTree = "<group>"; };
+		597C48BA1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsViewControllerTest.m; sourceTree = "<group>"; };
+		597C48BC1FEC1695009AD84C /* OCMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OCMock.framework; sourceTree = "<group>"; };
 		5991FC801FD6D70C00250D78 /* CountryDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsViewController.h; sourceTree = "<group>"; };
 		5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsViewController.m; sourceTree = "<group>"; };
 		5998F3361FCDA71700E88012 /* FlatstackTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatstackTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +93,7 @@
 		5998F34A1FCDA71700E88012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5998F34B1FCDA71700E88012 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5998F3511FCDA71700E88012 /* FlatstackTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatstackTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5998F3551FCDA71700E88012 /* FlatstackTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlatstackTaskTests.m; sourceTree = "<group>"; };
+		5998F3551FCDA71700E88012 /* CountryTableViewControllerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryTableViewControllerTest.m; sourceTree = "<group>"; };
 		5998F3571FCDA71700E88012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5998F35C1FCDA71700E88012 /* FlatstackTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatstackTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5998F3601FCDA71700E88012 /* FlatstackTaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlatstackTaskUITests.m; sourceTree = "<group>"; };
@@ -116,6 +126,11 @@
 		59C8B5EC1FD1975B0015CB34 /* CountryImagesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryImagesCollectionViewCell.h; sourceTree = "<group>"; };
 		59C8B5ED1FD1975B0015CB34 /* CountryImagesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryImagesCollectionViewCell.m; sourceTree = "<group>"; };
 		59C8B5EE1FD1975B0015CB34 /* CountryImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryImagesCollectionViewCell.xib; sourceTree = "<group>"; };
+		82AC836D9EA67AE1C644EFA4 /* Pods-FlatstackTaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatstackTaskUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlatstackTaskUITests/Pods-FlatstackTaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BF57791604D29CF5D3A3B635 /* Pods-FlatstackTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatstackTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlatstackTask/Pods-FlatstackTask.release.xcconfig"; sourceTree = "<group>"; };
+		D2D7EB7C65DC9CD2F615A043 /* libPods-FlatstackTaskUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlatstackTaskUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9DAC78F1AE019B26A8A8CE1 /* Pods-FlatstackTaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatstackTaskUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlatstackTaskUITests/Pods-FlatstackTaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCFA226B919BA4770EB1DEF9 /* Pods-FlatstackTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatstackTaskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlatstackTaskTests/Pods-FlatstackTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4772F725A31FCD8FFF8F312 /* libPods-FlatstackTask.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF54F36F2F1A8E37783658AC /* libPods-FlatstackTaskTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7060C0EF156F4E1CD3137C1B /* libPods-FlatstackTaskUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +217,7 @@
 				5998F35F1FCDA71700E88012 /* FlatstackTaskUITests */,
 				5998F3371FCDA71700E88012 /* Products */,
 				59C8B5D11FD17BEE0015CB34 /* Frameworks */,
+				8C067F2FCE96DB387E4C6886 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,7 +248,8 @@
 		5998F3541FCDA71700E88012 /* FlatstackTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				5998F3551FCDA71700E88012 /* FlatstackTaskTests.m */,
+				5998F3551FCDA71700E88012 /* CountryTableViewControllerTest.m */,
+				597C48BA1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m */,
 				5998F3571FCDA71700E88012 /* Info.plist */,
 			);
 			path = FlatstackTaskTests;
@@ -364,7 +384,11 @@
 		59C8B5D11FD17BEE0015CB34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				597C48BC1FEC1695009AD84C /* OCMock.framework */,
 				5953AD781FE2A8F600BF37B2 /* CoreData.framework */,
+				3E655F704D9207B8BA523714 /* libPods-FlatstackTask.a */,
+				17AA283493DB6F4B94298430 /* libPods-FlatstackTaskTests.a */,
+				D2D7EB7C65DC9CD2F615A043 /* libPods-FlatstackTaskUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -409,6 +433,19 @@
 			path = "Country Images";
 			sourceTree = "<group>";
 		};
+		8C067F2FCE96DB387E4C6886 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A37B0A8DAF971D20C28D828 /* Pods-FlatstackTask.debug.xcconfig */,
+				BF57791604D29CF5D3A3B635 /* Pods-FlatstackTask.release.xcconfig */,
+				0ACAF55E5F4CF43F4CBBA6A3 /* Pods-FlatstackTaskTests.debug.xcconfig */,
+				DCFA226B919BA4770EB1DEF9 /* Pods-FlatstackTaskTests.release.xcconfig */,
+				D9DAC78F1AE019B26A8A8CE1 /* Pods-FlatstackTaskUITests.debug.xcconfig */,
+				82AC836D9EA67AE1C644EFA4 /* Pods-FlatstackTaskUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,9 +453,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5998F3651FCDA71700E88012 /* Build configuration list for PBXNativeTarget "FlatstackTask" */;
 			buildPhases = (
+				30C21502CC8961CFB45A660F /* [CP] Check Pods Manifest.lock */,
 				5998F3321FCDA71700E88012 /* Sources */,
 				5998F3331FCDA71700E88012 /* Frameworks */,
 				5998F3341FCDA71700E88012 /* Resources */,
+				F19B779D85CAF5B19F30C7EC /* [CP] Embed Pods Frameworks */,
+				0ABF6B6320BA22C2A25C25E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,9 +473,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5998F3681FCDA71700E88012 /* Build configuration list for PBXNativeTarget "FlatstackTaskTests" */;
 			buildPhases = (
+				B9BE18A3BE7F7587043599E2 /* [CP] Check Pods Manifest.lock */,
 				5998F34D1FCDA71700E88012 /* Sources */,
 				5998F34E1FCDA71700E88012 /* Frameworks */,
 				5998F34F1FCDA71700E88012 /* Resources */,
+				38F2D4F5BDB19C90ED202331 /* [CP] Embed Pods Frameworks */,
+				143ED358CC0308CB713D79DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -451,9 +494,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5998F36B1FCDA71700E88012 /* Build configuration list for PBXNativeTarget "FlatstackTaskUITests" */;
 			buildPhases = (
+				783D810D175FE025093E7828 /* [CP] Check Pods Manifest.lock */,
 				5998F3581FCDA71700E88012 /* Sources */,
 				5998F3591FCDA71700E88012 /* Frameworks */,
 				5998F35A1FCDA71700E88012 /* Resources */,
+				1895924CACA4EDF12DC1989C /* [CP] Embed Pods Frameworks */,
+				EA0AF478A6F29C390F00D0E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -541,6 +587,153 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ABF6B6320BA22C2A25C25E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatstackTask/Pods-FlatstackTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		143ED358CC0308CB713D79DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatstackTaskTests/Pods-FlatstackTaskTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1895924CACA4EDF12DC1989C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatstackTaskUITests/Pods-FlatstackTaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30C21502CC8961CFB45A660F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlatstackTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38F2D4F5BDB19C90ED202331 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatstackTaskTests/Pods-FlatstackTaskTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		783D810D175FE025093E7828 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlatstackTaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9BE18A3BE7F7587043599E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlatstackTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA0AF478A6F29C390F00D0E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatstackTaskUITests/Pods-FlatstackTaskUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F19B779D85CAF5B19F30C7EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlatstackTask/Pods-FlatstackTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5998F3321FCDA71700E88012 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -573,7 +766,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5998F3561FCDA71700E88012 /* FlatstackTaskTests.m in Sources */,
+				597C48BB1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m in Sources */,
+				5998F3561FCDA71700E88012 /* CountryTableViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +920,7 @@
 		};
 		5998F3661FCDA71700E88012 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A37B0A8DAF971D20C28D828 /* Pods-FlatstackTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -745,6 +940,7 @@
 		};
 		5998F3671FCDA71700E88012 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF57791604D29CF5D3A3B635 /* Pods-FlatstackTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -764,6 +960,7 @@
 		};
 		5998F3691FCDA71700E88012 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ACAF55E5F4CF43F4CBBA6A3 /* Pods-FlatstackTaskTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -779,6 +976,7 @@
 		};
 		5998F36A1FCDA71700E88012 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCFA226B919BA4770EB1DEF9 /* Pods-FlatstackTaskTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -794,6 +992,7 @@
 		};
 		5998F36C1FCDA71700E88012 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9DAC78F1AE019B26A8A8CE1 /* Pods-FlatstackTaskUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W56K4E4L5F;
@@ -808,6 +1007,7 @@
 		};
 		5998F36D1FCDA71700E88012 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82AC836D9EA67AE1C644EFA4 /* Pods-FlatstackTaskUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W56K4E4L5F;
