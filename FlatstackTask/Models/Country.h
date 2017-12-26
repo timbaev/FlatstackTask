@@ -24,4 +24,10 @@
 - (id)initWithName:(NSString *)name continent:(NSString *)contentent capital:(NSString *)capital population:(NSUInteger)population shortDescription:(NSString *)shortDescription fullDescription:(NSString *)fullDescription images:(NSMutableArray<NSURL *> *)imagesURL flagImage:(NSURL *)flagImageURL;
 - (id)initFromManagedObject:(CountryManaged *)countryManaged;
 
+- (BOOL)isEqual:(id)other;
+
+- (BOOL)isEqualToCountry:(Country *)country;
+
+- (NSUInteger)hash;
+
 @end

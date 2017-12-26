@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Repository.h"
+#import "CoreDataManager.h"
 
 @interface BaseRepository : NSObject<Repository>
-
+@property (strong, nonatomic) CoreDataManager *manager;
 @end

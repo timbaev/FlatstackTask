@@ -16,6 +16,7 @@
 		597C48BB1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 597C48BA1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m */; };
 		5991FC821FD6D70C00250D78 /* CountryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */; };
 		59956A5A1FED52D00083298D /* ImageDownloaderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 59956A591FED52D00083298D /* ImageDownloaderTest.m */; };
+		59956A5D1FED60FC0083298D /* BaseRepostitoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 59956A5C1FED60FC0083298D /* BaseRepostitoryTest.m */; };
 		5998F33B1FCDA71700E88012 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5998F33A1FCDA71700E88012 /* AppDelegate.m */; };
 		5998F3411FCDA71700E88012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5998F33F1FCDA71700E88012 /* Main.storyboard */; };
 		5998F3441FCDA71700E88012 /* FlatstackTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5998F3421FCDA71700E88012 /* FlatstackTask.xcdatamodeld */; };
@@ -85,6 +86,7 @@
 		5991FC801FD6D70C00250D78 /* CountryDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryDetailsViewController.h; sourceTree = "<group>"; };
 		5991FC811FD6D70C00250D78 /* CountryDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryDetailsViewController.m; sourceTree = "<group>"; };
 		59956A591FED52D00083298D /* ImageDownloaderTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloaderTest.m; sourceTree = "<group>"; };
+		59956A5C1FED60FC0083298D /* BaseRepostitoryTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRepostitoryTest.m; sourceTree = "<group>"; };
 		5998F3361FCDA71700E88012 /* FlatstackTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatstackTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5998F3391FCDA71700E88012 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5998F33A1FCDA71700E88012 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				5998F3551FCDA71700E88012 /* CountryTableViewControllerTest.m */,
 				597C48BA1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m */,
 				59956A591FED52D00083298D /* ImageDownloaderTest.m */,
+				59956A5C1FED60FC0083298D /* BaseRepostitoryTest.m */,
 				5998F3571FCDA71700E88012 /* Info.plist */,
 			);
 			path = FlatstackTaskTests;
@@ -772,6 +775,7 @@
 				59956A5A1FED52D00083298D /* ImageDownloaderTest.m in Sources */,
 				597C48BB1FEC09AE009AD84C /* CountryDetailsViewControllerTest.m in Sources */,
 				5998F3561FCDA71700E88012 /* CountryTableViewControllerTest.m in Sources */,
+				59956A5D1FED60FC0083298D /* BaseRepostitoryTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

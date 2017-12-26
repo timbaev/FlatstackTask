@@ -7,11 +7,18 @@
 //
 
 #import "BaseRepository.h"
-#import "CoreDataManager.h"
 #import "Country.h"
-#import "CountryManaged+CoreDataClass.h"
 
 @implementation BaseRepository
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.manager = [CoreDataManager sharedManager];
+    }
+    return self;
+}
 
 - (BOOL)deleteModelWithID:(NSInteger)id {
     return true;
@@ -40,7 +47,7 @@
 
 - (BOOL)insertWithModel:(__autoreleasing id<Storable>)model {
     [model toManagedObject];
-    [[CoreDataManager sharedManager] saveContext];
+    [self.manager saveContext];
     return true;
 }
 
