@@ -35,21 +35,4 @@
     }] resume];
 }
 
-//NSString *const GetAllCountriesURL = @"https://rawgit.com/NikitaAsabin/799e4502c9fc3e0ea7af439b2dfd88fa/raw/145611f98d4ef72b758966f00b25552a78437212/page1.json";
-//
-//-(void)getAllCountries {
-//    NSString *urlAsString = [NSString stringWithString:GetAllCountriesURL];
-//    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
-//    NSLog(@"%@", urlAsString);
-//
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        if (error) {
-//            [self.delegate fetchingCountriesFailedWithError:error];
-//        } else {
-//            [self.delegate receivedCountriesJSON:data];
-//        }
-//    }] resume];
-//}
-
 @end

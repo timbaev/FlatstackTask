@@ -7,7 +7,6 @@
 //
 
 #import "CountryParser.h"
-#import "Country.h"
 
 @implementation CountryParser
 
@@ -17,7 +16,7 @@
     
     NSMutableArray<Country *> *countries = [NSMutableArray new];
     
-    NSArray *array = [dictionary objectForKey:@"countries"];
+    NSArray *array = dictionary[@"countries"];
     [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSString *name = [obj objectForKey:@"name"];
         NSString *continent = [obj objectForKey:@"continent"];
@@ -27,13 +26,13 @@
         NSString *description = [obj objectForKey:@"description"];
         
         NSDictionary *countryInfo = [obj objectForKey:@"county_info"];
-        NSString *flagImageUrlString = [countryInfo objectForKey:@"flag"];
+        NSString *flagImageUrlString = countryInfo[@"flag"];
         NSURL *flagImageURL = [[NSURL alloc] initWithString:flagImageUrlString];
         
         NSMutableArray<NSURL *> *imagesURL = [NSMutableArray new];
-        id imagesUrlId = [countryInfo objectForKey:@"images"];
+        id imagesUrlId = countryInfo[@"images"];
         if (![imagesUrlId isKindOfClass:[NSString class]]) {
-            NSArray *imagesUrlString = [countryInfo objectForKey:@"images"];
+            NSArray *imagesUrlString = countryInfo[@"images"];
             for (NSString *urlString in imagesUrlString) {
                 NSURL *url = [[NSURL alloc] initWithString:urlString];
                 [imagesURL addObject:url];
