@@ -26,7 +26,7 @@
 
 - (NSArray<id<Storable>> *)getAllWithClass:(Class)class {
     if ([Country class] == class) {
-        NSManagedObjectContext *viewContext = [[CoreDataManager sharedManager] viewContext];
+        NSManagedObjectContext *viewContext = [self.manager viewContext];
         NSFetchRequest *request = [CountryManaged fetchRequest];
         NSError *error = nil;
         NSArray *results = [viewContext executeFetchRequest:request error:&error];
