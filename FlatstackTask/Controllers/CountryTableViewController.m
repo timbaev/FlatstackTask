@@ -91,6 +91,7 @@ NSString *const DETAILS_SEGUE_IDENTIFIER = @"detailsSegue";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CountryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CounrtyCellIdentifier];
+    cell.accessibilityIdentifier = [NSString stringWithFormat:@"country-%ld", (long)indexPath.row];
     [cell prepareCellWithCountry:[self.countries objectAtIndex:indexPath.row]];
     return cell;
 }
