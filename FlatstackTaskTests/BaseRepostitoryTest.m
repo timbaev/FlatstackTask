@@ -47,14 +47,13 @@
     
     //assert
     OCMVerify(repository.manager.saveContext);
-    OCMVerify(expecredCountry.toManagedObject);
     XCTAssertEqual(actionResult, expectedResult);
 }
 
 - (void)testGetAllCountries {
     //arrange
-    id coreDataManagerMoc = OCMClassMock([CoreDataManager class]);
     BaseRepository *repository = [[BaseRepository alloc] init];
+    id coreDataManagerMoc = OCMClassMock([CoreDataManager class]);
     repository.manager = coreDataManagerMoc;
     
     Country *expectedCountry = [[Country alloc] initWithName:@"Test" continent:@"Test" capital:@"Test" population:15 shortDescription:@"Test" fullDescription:@"Test" images:nil flagImage:nil];

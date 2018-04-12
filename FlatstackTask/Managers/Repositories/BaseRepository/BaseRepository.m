@@ -46,7 +46,7 @@
 }
 
 - (BOOL)insertWithModel:(__autoreleasing id<Storable>)model {
-    [model toManagedObject];
+    [model toManagedObjectInContext:[self.manager viewContext]];
     [self.manager saveContext];
     return true;
 }

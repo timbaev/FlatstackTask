@@ -45,9 +45,8 @@
     return self;
 }
 
-- (NSManagedObject *)toManagedObject {
-    NSManagedObjectContext *viewContext = [[CoreDataManager sharedManager] viewContext];
-    CountryManaged *countryManaged = [[CountryManaged alloc] initWithContext:viewContext];
+- (NSManagedObject *)toManagedObjectInContext:(NSManagedObjectContext *)context {
+    CountryManaged *countryManaged = [[CountryManaged alloc] initWithContext:context];
     countryManaged.name = self.name;
     countryManaged.continent = self.continent;
     countryManaged.capital = self.capital;

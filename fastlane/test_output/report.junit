@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='FlatstackTaskTests.xctest' tests='17' failures='1'>
+  <testsuite name='BaseRepostitoryTest' tests='2' failures='1'>
+    <testcase classname='BaseRepostitoryTest' name='testGetAllCountries'>
+      <failure message='((expectedCountries) equal to (countries)) failed: (&quot;('>FlatstackTaskTests/BaseRepostitoryTest.m:67</failure>
+    </testcase>
+    <testcase classname='BaseRepostitoryTest' name='testInsertModel' time='0.001'/>
+  </testsuite>
+  <testsuite name='CountryDetailsViewControllerTest' tests='8' failures='0'>
+    <testcase classname='CountryDetailsViewControllerTest' name='testCollectionViewPreferences' time='0.004'/>
+    <testcase classname='CountryDetailsViewControllerTest' name='testPrepareCollectionView' time='0.002'/>
+    <testcase classname='CountryDetailsViewControllerTest' name='testPrepareNavigationBar' time='0.011'/>
+    <testcase classname='CountryDetailsViewControllerTest' name='testPreparePageControl' time='0.001'/>
+    <testcase classname='CountryDetailsViewControllerTest' name='testPrepareTableView' time='0.002'/>
+    <testcase classname='CountryDetailsViewControllerTest' name='testTableViewPreferences' time='0.005'/>
+    <testcase classname='CountryDetailsViewControllerTest' name='testViewDidLoad' time='0.001'/>
+    <testcase classname='CountryDetailsViewControllerTest' name='testViewWillDisappear' time='0.007'/>
+  </testsuite>
+  <testsuite name='CountryParserTest' tests='1' failures='0'>
+    <testcase classname='CountryParserTest' name='testParseData' time='0.001'/>
+  </testsuite>
+  <testsuite name='CountryRepositoryTest' tests='1' failures='0'>
+    <testcase classname='CountryRepositoryTest' name='testDeleteAll' time='0.001'/>
+  </testsuite>
+  <testsuite name='FlatstackTaskTests' tests='3' failures='0'>
+    <testcase classname='FlatstackTaskTests' name='testLoadCountriesFromRepository' time='0.002'/>
+    <testcase classname='FlatstackTaskTests' name='testPrepareTableView' time='0.008'/>
+    <testcase classname='FlatstackTaskTests' name='testViewDidLoad' time='0.016'/>
+  </testsuite>
+  <testsuite name='ImageDownloaderTest' tests='1' failures='0'>
+    <testcase classname='ImageDownloaderTest' name='testDownloadImage' time='0.405'/>
+  </testsuite>
+  <testsuite name='LoadCountryRequestTest' tests='1' failures='0'>
+    <testcase classname='LoadCountryRequestTest' name='testMakeLoadCountryRequest' time='0.993'/>
+  </testsuite>
+</testsuites>
